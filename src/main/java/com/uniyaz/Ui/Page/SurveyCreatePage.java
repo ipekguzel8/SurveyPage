@@ -1,4 +1,5 @@
 package com.uniyaz.Ui.Page;
+
 import com.uniyaz.Ui.Component.SPMultipleSelection;
 import com.vaadin.data.Property;
 import com.vaadin.server.FontAwesome;

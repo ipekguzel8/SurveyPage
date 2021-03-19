@@ -6,7 +6,6 @@ import com.uniyaz.Core.Domain.SurveyQuestion;
 import com.uniyaz.Core.Utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
@@ -19,17 +18,18 @@ public class SurveyQuestionDao extends BaseDao<SurveyQuestion> {
         super(SurveyQuestion.class);
     }
 
-    public List<Question> findAllQuestion( Survey survey) {
+    public List<SurveyQuestion> findAllQuestion(Survey survey) {
+        Long Id= survey.getId();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         try (Session session = sessionFactory.openSession()) {
-            String hql =
-                    "Select     surveyQuestion " +
-                            "From       SurveyQuestion surveyQuestion " +
-                            "where  surveyQuestion.id=" + survey.getId()+"";
+            String hql = "Select surveyQuestion " +
+                            "From SurveyQuestion surveyQuestion " +
+                            "where  surveyQuestion.survey.id=" + Id+"";
             Query query = session.createQuery(hql);
             return query.list();
         } catch (Exception e) {
             e.printStackTrace();
+
         }
         return null;
 

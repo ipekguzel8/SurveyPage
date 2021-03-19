@@ -2,7 +2,6 @@ package com.uniyaz.Core.Service;
 
 import com.uniyaz.Core.Dao.BaseDao;
 import com.uniyaz.Core.Domain.BaseEntity;
-
 import java.util.List;
 
 /**

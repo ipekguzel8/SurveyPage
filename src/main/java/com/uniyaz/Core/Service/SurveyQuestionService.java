@@ -1,9 +1,9 @@
 package com.uniyaz.Core.Service;
+
 import com.uniyaz.Core.Dao.SurveyQuestionDao;
 import com.uniyaz.Core.Domain.Question;
 import com.uniyaz.Core.Domain.Survey;
 import com.uniyaz.Core.Domain.SurveyQuestion;
-
 import java.util.List;
 
 /**
@@ -13,7 +13,7 @@ public class SurveyQuestionService extends BaseService<SurveyQuestion, SurveyQue
     public SurveyQuestionService() {
         super(SurveyQuestionDao.class);
     }
-    public List<Question> findAllQuestion(Survey survey){
+    public List<SurveyQuestion> findAllQuestion(Survey survey){
         return getDao().findAllQuestion(survey);
     }
 }

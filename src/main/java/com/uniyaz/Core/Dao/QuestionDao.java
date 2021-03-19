@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.hibernate.transform.Transformers;
-
 import java.util.List;
 
 /**
@@ -36,15 +35,5 @@ public class QuestionDao extends BaseDao<Question>{
         return null;
     }
 
-    public List<QuestionDtoNative> findAllNative() {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        try (Session session = sessionFactory.openSession()) {
-            NativeQuery sqlQuery = session.createSQLQuery("SELECT * FROM QUESTION");
-            Query query = sqlQuery.setResultTransformer(Transformers.aliasToBean(QuestionDtoNative.class));
-            return query.list();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+
 }

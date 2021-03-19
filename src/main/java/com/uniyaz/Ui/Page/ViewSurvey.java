@@ -1,11 +1,6 @@
 package com.uniyaz.Ui.Page;
 
-import com.uniyaz.Ui.MyUI;
 import com.vaadin.ui.*;
-import javafx.scene.control.RadioButton;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by ipekg on 2021

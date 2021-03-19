@@ -28,11 +28,11 @@ public class UserSurvey extends BaseEntity{
         this.survey = survey;
     }
 
-    public Question getQuestion() {
+    public SurveyQuestion getQuestion() {
         return question;
     }
 
-    public void setQuestion(Question question) {
+    public void setQuestion(SurveyQuestion question) {
         this.question = question;
     }
 
@@ -63,7 +63,7 @@ public class UserSurvey extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_QESTION", foreignKey = @ForeignKey(name = "FK_USER_SURVEY_QUESTION"))
-    private Question question;
+    private SurveyQuestion question;
 
     @Column(name = "REPLY")
     private String reply;

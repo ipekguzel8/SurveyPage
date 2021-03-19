@@ -1,4 +1,5 @@
 package com.uniyaz.Ui.Page;
+
 import com.vaadin.ui.VerticalLayout;
 
 /**

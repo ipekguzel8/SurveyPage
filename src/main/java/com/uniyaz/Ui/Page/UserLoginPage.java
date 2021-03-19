@@ -24,6 +24,7 @@ public class UserLoginPage extends VerticalLayout {
                 UserService userService= new UserService();
                 userService.save(user);
                 MyUI current = (MyUI) MyUI.getCurrent();
+                current.setUser(user);
                 Body body = current.getBody();
                 body.removeAllComponents();
                 body.addComponent(surveyList);

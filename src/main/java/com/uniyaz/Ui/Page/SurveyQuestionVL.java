@@ -5,15 +5,10 @@ import com.uniyaz.Core.Domain.QuestionOption;
 import com.uniyaz.Core.Domain.Survey;
 import com.uniyaz.Core.Domain.SurveyQuestion;
 import com.uniyaz.Core.Service.SurveyQuestionService;
-import com.uniyaz.Ui.Component.SPMultipleSelection;
 import com.uniyaz.Ui.MyUI;
-import com.vaadin.data.Property;
-import com.vaadin.event.ContextClickEvent;
 import com.vaadin.event.FieldEvents;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.*;
-import javafx.scene.control.RadioButton;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -124,17 +119,11 @@ public class SurveyQuestionVL extends VerticalLayout {
         questionField.addTextChangeListener(new FieldEvents.TextChangeListener() {
             @Override
             public void textChange(FieldEvents.TextChangeEvent textChangeEvent) {
-
                 MyUI current = (MyUI) MyUI.getCurrent();
                 ViewSurvey viewSurvey = current.getBody().getViewSurvey();
                 viewSurvey.setWord(textChangeEvent.getText());
-
             }
         });
-
-
-
-
         setSizeUndefined();
         addComponent(select);
 

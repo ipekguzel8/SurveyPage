@@ -4,7 +4,6 @@ import com.uniyaz.Ui.MyUI;
 import com.uniyaz.Ui.Page.*;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Alignment;
-import com.vaadin.ui.Component;
 import com.vaadin.ui.MenuBar;
 import com.vaadin.ui.UI;
 

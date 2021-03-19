@@ -1,11 +1,9 @@
 package com.uniyaz.Ui;
 
 import javax.servlet.annotation.WebServlet;
-
-import com.uniyaz.Core.Domain.QuestionOption;
 import com.uniyaz.Core.Domain.Survey;
+import com.uniyaz.Core.Domain.User;
 import com.uniyaz.Ui.Page.Body;
-import com.uniyaz.Ui.Page.Footer;
 import com.uniyaz.Ui.Page.Header;
 import com.uniyaz.Ui.Page.MainPage;
 import com.vaadin.annotations.Theme;
@@ -13,11 +11,7 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
@@ -30,9 +24,16 @@ import com.vaadin.ui.VerticalLayout;
 @Widgetset("com.uniyaz.MyAppWidgetset")
 public class MyUI extends UI {
     private Survey useSurvey= new Survey();
+    private User user = new User();
     public Survey getUseSurvey() {
         return useSurvey;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getUser(){ return user;}
 
     public void setUseSurvey(Survey useSurvey) {
         this.useSurvey = useSurvey;

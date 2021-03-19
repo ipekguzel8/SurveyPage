@@ -1,6 +1,6 @@
 package com.uniyaz.Core.Dao;
+
 import com.uniyaz.Core.Domain.BaseEntity;
-import com.uniyaz.Core.Domain.QuestionOption;
 import com.uniyaz.Core.Utils.HibernateUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;

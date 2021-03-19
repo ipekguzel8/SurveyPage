@@ -1,7 +1,6 @@
 package com.uniyaz.Ui.Component;
 
 import com.vaadin.ui.OptionGroup;
-
 import java.util.List;
 
 /**
