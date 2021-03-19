@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/deneme?serverTimezone=Turkey</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">1255896149</property>
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <property name="connection.autocommit">true</property>
+
+        <mapping class="com.uniyaz.Core.Domain.Survey"></mapping>
+        <mapping class="com.uniyaz.Core.Domain.Question"></mapping>
+        <mapping class="com.uniyaz.Core.Domain.User"></mapping>
+        <mapping class="com.uniyaz.Core.Domain.SurveyQuestion"></mapping>
+        <mapping class="com.uniyaz.Core.Domain.QuestionOption"></mapping>
+        <mapping class="com.uniyaz.Core.Domain.UserSurvey"></mapping>
+    </session-factory>
+</hibernate-configuration>
